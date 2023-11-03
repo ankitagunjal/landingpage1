@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Webpage</title>
+    <style>
+        body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: aquamarine;
+}
+
+:root{
+    --primary-text-color:#183b56;
+    --secondary-text-color:#29069b;
+    --accent-color:#0f837a;
+    --padding-inline-section:20px;
+}
+body{
+    font-family:'poppins','sans-sarif';
+    color:var(--primary-text-color);
+}
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondary-text-color);
+    line-height: 1.8rem;
+}
+
+
+ul{
+    list-style: none;
+    gap: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.banner-top{
+    background-color:#0f837a;
+}
+.small-bold-text{
+    font-size: 20px;
+    font-weight: bold;
+}
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    padding-inline: var(--padding-inline-section);
+}
+.banner-text{
+    color: black;
+    text-align: center;
+    padding: 15px 30px;
+
+}
+
+.main-nav{
+    justify-content: space-between;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+
+/* utility */
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.hover-links{
+    color: var(--primary-text-color);
+    transition: 0.5s ease-out;
+}
+.hover-links:hover{
+    color: var(--accent-color);
+}
+.primary-button{
+    background-color: var(--secondary-text-color);
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.5s ease-out;
+    color: white !important;
+    padding: 12px 24px;
+
+
+}
+.primary-button:hover{
+    background-color: var(--accent-color);
+}
+.secondary-button{
+    border:0.5px solid var(--secondary-text-color);
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    transition: 0.5s ease-out;
+}
+.secondary-button:hover{
+    border-color:0.5px solid var(--accent-color);
+}
+.companies-header{
+    font-size: large;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logos{
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+
+/* big feature section */
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0;
+}
+.big-feature-container{
+    gap: 30px;
+}
+#second-big-feature{
+    gap: 30px;
+    flex-direction:row-reverse ;
+}
+.feature-img img{
+    width: 100%;
+}
+.feature-desc{
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+
+/* Examples section */
+
+  .examples-header{
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .examples-card{
+    width: 23%;
+    background-color: black;
+    min-height: 300px;
+    position: relative;
+    border-radius: 10px;
+    /* background-image: url('https://i.pinimg.com/564x/73/ea/f1/73eaf14e4c2274e85a24450f46dc93d3.jpg'); */
+
+  }
+  .card1{
+    background-image: url('https://i.pinimg.com/564x/76/f3/84/76f3847851d316b20c5cf79e5f573e0e.jpg');
+    background-size: cover;
+  }
+
+  .card2{
+   background-image: url('https://i.pinimg.com/564x/a7/04/23/a704235577800c3cde16cbb9bd9def15.jpg');
+  }
+
+  .card3{
+    background-image: url('https://i.pinimg.com/564x/97/47/f8/9747f8b0fbdb8cfb014e291a3eb78d09.jpg');
+   }
+   .card4{
+    background-image: url('https://i.pinimg.com/564x/90/65/5c/90655cc27017d15db34b74ac41f1c8ed.jpg');
+   }
+  .examples-card-heading{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+    color: white;
+  }
+   
+  .card-area{
+    justify-content: space-between;
+    margin-block: 30px;
+    gap: 30px;
+  }
+  .footer-container{
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  .link-column{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+/* media query */
+
+@media screen and (max-width:991px){
+    .main-nav {
+        overflow: initial;
+    }
+    .nav-links {
+        position: absolute;
+        background-color: white;
+        left: -100%;
+        top: 100%;
+        width: 100%;
+        padding-block: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .nav-toggle {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+    .header-right{
+        width: 100%;
+    }
+
+    .card-area{
+        flex-direction: column;
+        gap: 20px;
+     }
+     .examples-card {
+        width: calc(50% - 10px);
+        height: 180px;
+    }
+
+
+}
+
+
+
+@media screen and (max-width:769px){
+
+    .primary-button{
+        width: 100%;
+        margin-right: 50px;
+    }
+    .header-left {
+        max-width: 100vw;
+        text-align: center;
+    }
+    .header-section{
+        flex-direction: column-reverse;
+    }
+    .companies-header{
+        padding-top: 30px;
+    }
+    .big-feature-container{
+        flex-direction: column-reverse;
+    }
+
+    #second-big-feature{
+        flex-direction: column-reverse;
+    }
+    #con{
+        flex-direction: column-reverse;
+    }
+     
+    .card-area{
+        flex-direction: column;
+        gap: 20px;
+     }
+     .examples-card {
+        width: calc(50% - 10px);
+        height: 180px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width:476px){
+    .header-right{
+        width: 100%;
+    }
+    .companies-header{
+        padding-top: 30px;
+    }
+
+    .big-feature-container{
+        flex-direction: column-reverse;
+    }
+    #second-big-feature{
+        flex-direction: column-reverse;
+    }
+
+    #con{
+        flex-direction: column-reverse;
+    }
+
+    .examples-card{
+        flex-direction: column;
+    }
+    .examples-card {
+        width: 100%;
+    }
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="banner-top">
+    <div class="container">
+      <div class="small-bold-text banner-text">New to Usability Hub: Open and Closed card sorting</div>  
+    </div>
+</div>
+
+<nav>
+    <div class="container main-nav flex">
+        <a href="#" class="company-logo">
+            <img class="logo-image" src="https://i.pinimg.com/564x/c0/38/59/c0385909917142db69fb0cb5071b11a2.jpg" height="100px">
+        </a>
+
+        <div class="nav-links">
+            <ul class="flex">
+                <li><a href="#" class="hover-link">Products</a></li>
+                <li><a href="#" class="hover-link">Coustomer</a></li>
+                <li><a href="#" class="hover-link">Pricing</a></li>
+                <li><a href="#" class="hover-link">Resources</a></li>
+                <li><a href="#" class="hover-link secondary-button">sign Up</a></li>
+                <li><a href="#" class="hover-link primary-button">Sign in</a></li>
+            </ul>
+        </div>
+        <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>
+</nav>
+<header>
+<div class="container header-section flex">
+    <div class="header-left">
+        <h1>Your Complete Website Design Solution</h1>
+        <p>With Wix’s intuitive technology and powerful built-in features you’ll have the creative freedom to design a website you’re proud of..</p>
+        <a href="#" class="primary-button get-started-btn">Get Started</a>
+    </div>
+    <div class="header-right">
+        <img src="https://i.pinimg.com/564x/bc/a6/64/bca6646bf9a81fc4a748f45f4388adcc.jpg" alt="hero image">
+    </div>
+</div>
+</header>
+        <div class="small-bold-text companies-header">The world’s best companies rely on ONLY to make better design decisions.</div>
+        <div class="logos flex">
+            <img class="logo" src="https://i.pinimg.com/564x/fe/54/b9/fe54b93c934495741f58a20cfe6daf6d.jpg" alt="" height="50px">
+            <img class="logo" src="https://i.pinimg.com/564x/40/26/6a/40266aa91d83b991faee5c9529858a59.jpg" alt="" height="60px">
+            <img class="logo" src="https://i.pinimg.com/564x/fc/43/1a/fc431a3fbdfbb51fbc967269a2294815.jpg" alt="" height="60px">
+            <img class="logo" src="https://i.pinimg.com/564x/86/0c/87/860c87633f4de3aae800d9c948cbebdd.jpg" alt="" height="60px">
+            <img class="logo" src="https://i.pinimg.com/564x/7e/cf/32/7ecf32b76749a2efce4b7eb6c371f3a6.jpg" alt="" height="80px">
+            <img class="logo" src="https://i.pinimg.com/564x/0e/33/3b/0e333b34791402cabc4a477bd8eaa626.jpg" alt="" height="80px">
+            <img class="logo" src="https://i.pinimg.com/564x/60/ca/1b/60ca1bd0e182051d61b01586d6e5a05b.jpg" alt="" height="80px">
+        </div>
+    </div>
+</section>
+
+<section class="big-feature-section">
+    <div class="container flex big-feature-container" id="con">
+        <div class="feature-img">
+            <img src="https://i.pinimg.com/564x/38/4b/36/384b36bd149e162eecf22fb27dbb5bc6.jpg" alt="">
+        </div>
+        <div class="feature-desc flex">
+            <!-- <h4>On</h4> -->
+            <h3>Online Scheduling</h3>
+            <p>Take bookings online and manage them right from your site. Host sessions online with Zoom, offer memberships or packages and sync your team’s calendars with ease.</p>
+        </div>
+    </div>
+</section>
+
+<section class="big-feature-section">
+    <div class="container flex big-feature-container" id="second-big-feature">
+        <div class="feature-img">
+            <img src="https://i.pinimg.com/564x/06/56/71/06567186213de0e8007cd98b367820a8.jpg" alt="">
+            
+        </div>
+        <div class="feature-desc flex">
+            <!-- <h4>Effortless validation for</h4> -->
+            <h3>E-Mail Marketing</h3>
+            <p>Send customized email marketing campaigns designed to bring visitors to your site. Set up triggered emails that respond to site actions.</p>
+        </div>
+    </div>
+</section>
+
+<section class="big-feature-section">
+    <div class="container flex big-feature-container">
+        <div class="feature-img">
+            <img src="https://i.pinimg.com/564x/64/34/5b/64345b9e9506d35cc9bf5098cd24d28c.jpg" alt="">
+        </div>
+        <div class="feature-desc flex">
+            <!-- <h4>Effortless validation for</h4> -->
+            <h3>Online Stores</h3>
+            <p>Build your eCommerce business online. Sell on multiple channels, accept secure online payments, start dropshipping and increase your revenue.</p>
+        </div>
+    </div>
+</section>
+
+<section class="example-section">
+    <div class="container">
+        <div class="examples-header flex">
+            <h3 class="example-header-text">One platform, endless possibilities</h3>
+            <a href="#" class="secondary-button">See more examples <i class="fa-solid fa-right-long"></i></a>
+        </div>
+        <div class="card-area flex" id="exp">
+            <a href="#" class="examples-card card1">
+                <h3 class="examples-card-heading">Complete a task in my software interface?</h3>
+            </a>
+
+            <a href="#" class="examples-card card2">
+                <h3 class="examples-card-heading">Can user complete a task in my software interface?</h3>
+            </a>
+
+            <a href="#" class="examples-card card3">
+                <h3 class="examples-card-heading">Is my website’s intended audience clear?</h3>
+            </a>
+
+            <a href="#" class="examples-card card4">
+                <h3 class="examples-card-heading">Do visitors understand what a page is about?</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container flex footer-container">
+        <a href="#" class="company-logo">
+            <img src="https://i.pinimg.com/564x/c0/38/59/c0385909917142db69fb0cb5071b11a2.jpg" height="200px" alt="company logo">
+        </a>
+        <div class="link-column flex">
+            <h4>Product</h4>
+            <a href="#" class="hover-link">Overview</a>
+            <a href="#" class="hover-link">Pricing</a>
+            <a href="#" class="hover-link">Usability Hub</a>
+            <a href="#" class="hover-link">Customers Page</a>
+            <a href="#" class="hover-link">Status Page</a>
+        </div>
+        <div class="link-column flex">
+            <h4>Methodology</h4>
+            <a href="#" class="hover-link">Overview</a>
+            <a href="#" class="hover-link">Pricing</a>
+            <a href="#" class="hover-link">Usability Hub</a>
+            <a href="#" class="hover-link">Customers Page</a>
+            <a href="#" class="hover-link">Status Page</a>
+        </div>
+        <div class="link-column flex">
+            <h4>Resources</h4>
+            <a href="#" class="hover-link">Overview</a>
+            <a href="#" class="hover-link">Pricing</a>
+            <a href="#" class="hover-link">Usability Hub</a>
+            <a href="#" class="hover-link">Customers Page</a>
+            <a href="#" class="hover-link">Status Page</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
